@@ -132,6 +132,12 @@ for author in dataframe["Author"]:
             chart = MakeSvgInstance(horoscope, chart_type="Natal")
             chart.makeSVG()
             print(len(chart.aspects_list))
+        elif birthplace == "Lviv":
+            birthplace = "Unknown"
+            horoscope = KrInstance(str(author), int(date[0]),int(date[1]),int(date[2]),12,12, birthplace)
+            chart = MakeSvgInstance(horoscope, chart_type="Natal")
+            chart.makeSVG()
+            print(len(chart.aspects_list))
         else:
             horoscope = KrInstance(str(author), int(date[0]),int(date[1]),int(date[2]),12,12, birthplace)
             chart = MakeSvgInstance(horoscope, chart_type="Natal")
